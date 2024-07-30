@@ -12,11 +12,8 @@ interface IParams{
 
 const userActivities = () => {
     const {userid} = useParams<IParams | any>()
-    console.log(userid);
-
     let postdata: Posts[]|undefined =getPostData(Number(userid))
     let userinfo: UserData|undefined=getDatafromId(Number(userid))
-    console.log(postdata);
     
     return (
         <div className='user-posts'>

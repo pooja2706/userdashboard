@@ -19,9 +19,7 @@ const dashboard = () => {
                 throw new Error(`HTTP error: Status ${response.status}`);
               }
               let data = await response.json();
-              console.log('in fetchdata');
               setuserData(data)
-              console.log(userData);
               
         }
         catch (err) {

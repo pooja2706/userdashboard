@@ -10,16 +10,14 @@ const userProfile= () => {
   const {userid} = useParams<IParams | any>()
   console.log(userid);
   const userdata: UserData |undefined =getDatafromId(Number(userid))
-  // window.location.reload()
   const curruserpost: Posts[] |undefined =getPostData(userdata?.id)
   
   return (
     <div className="userpage-template">
-      {/* <div className="header-div"> */}
         <div className="about-me">
           <div className='name'>{userdata?.name}</div>
           <div className="username">@{userdata?.username}</div>
-          <div className="postcount">Posts: {curruserpost?.length}</div>
+          <a className="postcount" href={'/posts/'+userdata?.id}>Posts: {curruserpost?.length}</a>
         </div>
         <div className="detail-card">
           <div className="header-div">
@@ -34,7 +32,7 @@ const userProfile= () => {
           <div className="values">{userdata?.email}</div>
           </div>
           <div className="details">
-          <div className="heading">Address: &ebsp;</div>
+          <div className="heading">Address: &ensp;</div>
           <div className="values">{userdata?.address.suite}, {userdata?.address.street}, {userdata?.address.city}, {userdata?.address.zipcode} </div>
           </div>
           <div className="details">
@@ -63,7 +61,6 @@ const userProfile= () => {
           
           
         </div>
-      {/* </div> */}
     </div>
   )
 }
@@ -73,7 +70,6 @@ export function getDatafromId(id: number){
   let [userData, setuserData]=React.useState<UserData>();
   React.useEffect(()=>{
     fetchdata();
-    // getPostData(userData?.id)
   })
 
   const fetchdata=async ()=>{
@@ -83,10 +79,7 @@ export function getDatafromId(id: number){
               throw new Error(`HTTP error: Status ${response.status}`);
             }
             let data = await response.json();
-            // console.log('in fetchdata');
-            setuserData(data[id-1])         
-            // console.log(userData);
-            
+            setuserData(data[id-1])                     
       }
       catch (err) {
           console.log('error occured');
@@ -107,16 +100,13 @@ export function getPostData(userid: number | undefined){
   const fetchdata=async ()=>{
       try{
           const response =await fetch(postapilink)
-          // console.log(response);
           
           if (!response.ok) {
               throw new Error(`HTTP error: Status ${response.status}`);
             }
             let data: Posts[] = await response.json();
             let currUserPost: Posts[]=[];
-            // console.log('in fetchdata');
             data.map((post)=>{
-              // console.log(post); 
               if(post.userId==userid){
                 currUserPost.push(post)
               }

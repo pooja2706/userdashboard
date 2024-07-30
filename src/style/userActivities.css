@@ -1,3 +1,6 @@
+body{
+    background-color: aliceblue;
+}
 .user-posts{
     /* background-color: red; */
     display: grid;
