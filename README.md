@@ -1,3 +1,16 @@
+# Pages Designed and Path
+- Home/Dashboard ("/")
+- User's data    ("/user/"+ userid)   {Replace userid with the user's id}
+- Post's         ("posts/"+ postid)   {Replace postid with the user's id}
+- Page Not Found (If you interpret any wrong path)
+
+# Description
+- Home page displays all the registered users
+- If you click any user's card, you are redirected to the user's profile
+- If you click the post's icon, you are redirected to the page containing all the user's post
+- If you  mistype the path, you go to the Page not found Page which has a button to again redirect to the home page.
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
