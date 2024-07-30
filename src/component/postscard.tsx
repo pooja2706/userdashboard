@@ -1,5 +1,5 @@
-import React from 'react'
-import { Posts } from '../models/posts'
+// import React from 'react'
+// import { Posts } from '../models/posts'
 
 interface PostsDisplay{ //contains format of user's post structure
     username: string|undefined;

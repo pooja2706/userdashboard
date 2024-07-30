@@ -115,7 +115,7 @@ export function getPostData(userid: number | undefined){
             let data: Posts[] = await response.json();
             let currUserPost: Posts[]=[];
             // console.log('in fetchdata');
-            data.map((post, index)=>{
+            data.map((post)=>{
               // console.log(post); 
               if(post.userId==userid){
                 currUserPost.push(post)

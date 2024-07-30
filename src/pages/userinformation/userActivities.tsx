@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import {getDatafromId, getPostData} from './userProfile'
 import { useParams } from 'react-router-dom';
 import { Posts } from '../../models/posts';
@@ -20,7 +20,7 @@ const userActivities = () => {
     
     return (
         <div className='user-posts'>
-        {postdata && postdata.map((info, index)=>(
+        {postdata && postdata.map((info)=>(
             <PostsCard title={info.title} body={info.body} username={userinfo?.username}/>
         ))}
         </div>
