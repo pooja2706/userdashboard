@@ -1,0 +1,33 @@
+.user-posts{
+    /* background-color: red; */
+    display: grid;
+    color: black;
+}
+.card-template{
+    background-color: white;
+    /* height: 200px; */
+    width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    /* margin: 0 20px; */
+    margin: 20px auto;
+    color: black;
+    -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+    display: flow;
+}
+.title{
+    font-size: larger;
+    font-family: auto;
+    font-weight: 600;
+}
+.body{
+    margin-top: 10px;
+    font-size: small;
+    text-align: justify;
+}
+.username{
+/* float: right; */
+text-align: right;
+font-style: italic;
+font-size: small;
+}
