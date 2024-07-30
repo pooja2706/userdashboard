@@ -8,7 +8,6 @@ interface IParams{
 }
 const userProfile= () => {
   const {userid} = useParams<IParams | any>()
-  console.log(userid);
   const userdata: UserData |undefined =getDatafromId(Number(userid))
   const curruserpost: Posts[] |undefined =getPostData(userdata?.id)
   
