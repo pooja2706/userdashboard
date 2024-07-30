@@ -1,0 +1,17 @@
+.error-page{
+    display: grid;
+}
+.err-msg{
+    color: tomato;
+    font-size: x-large;
+    font-weight: bold;
+    margin: auto;
+}
+body{
+    display: grid;
+}
+a{
+    margin: auto;
+    margin-top: 30px;
+
+}
