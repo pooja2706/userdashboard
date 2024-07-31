@@ -34,3 +34,10 @@ text-align: right;
 font-style: italic;
 font-size: small;
 }
+
+@media screen and (max-width: 670px) {
+    .card-template {
+        /* margin: auto; */
+       width: 200px;
+     }
+}
